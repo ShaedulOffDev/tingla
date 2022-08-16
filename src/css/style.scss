@@ -5,44 +5,558 @@
 $font: 'Source Sans Pro', sans-serif;
 $color1: #0F0F54;
 $color2: #F9E0C7;
-// ! Doc
+// ! DOC
 html{
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: $font;
 }
 *,*::before,*::after{
     box-sizing: inherit;
 }
 body{
     margin: 0;
+    background-image: url(../images/line.png);
+    background-size: 400px;
+    background-attachment: fixed;
+}
+.container{
+    padding: 0 150px;
+}
+h1{
+    font-size: 80px;
+}
+h2{
+    font-size: 50px;
+}
+h3{
+    font-size: 40px;
+}
+p{
+    font-size: 20px;
 }
 // ! Header
-// ? Nav
 header{
-    .nav-topbar__battery{
-        position: relative;
-        border: 2px solid #444;
-        width: 20px;
-        height: 12px;
-        border-radius: 2.67px;
-        padding: .5px;
-        &::after{
-            content: '';
-            position: absolute;
-            left: 115%;
-            top: 50%;
-            transform: translateY(-50%);
-            background: #444;
-            width: 2px;
-            height: 5px;
-            border-radius: 0 50% 50% 0;
+    width: 100%;
+    background-image: url(../images/light.png),url(../images/triangle.png),url(../images/silinder.png), url(../images/star.png);
+    background-size: contain, 150px, 100px, 88px;
+    background-position: 0 50%, 70% 0, 5% 100%, 90% 100%;
+    background-repeat: no-repeat;
+    // ? Nav
+    .nav{
+        height: 70px;
+        padding: 10px 0;
+    }
+    // ? Landing Page
+    .landing{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-text{
+            width: 60%;
+            p{
+                font-size: 24px;
+            }
+            button{
+                background: $color1;
+                margin-top: 50px;
+                border-radius: 8px;
+                font-size: 20px;
+                a{
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 180px;
+                    height: 60px;
+                    color: #fff;
+                }
+            }
         }
-        &-level{
-            display: block;
+        &-picture{
+            width: 40%;
+            text-align: center;
+            pointer-events: none;
+            user-select: none;
+        }
+    }
+}
+
+// ! Main
+main{
+    // ? Videorolik
+    .videorolik{
+        margin: 100px 0;
+        width: 100%;
+        position: relative;
+        border-radius: 30px;
+        overflow: hidden;
+        img{
             width: 100%;
-            height: 100%;
-            background: #000;
-            border-radius: 1px;
+        }
+        &-filter{
+            position: absolute;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 5px; 
+            border-radius: 30px;
+            left: 0;
+            background: rgba(0,0,0,.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #fff;
+        }
+    }
+
+    // ? About
+    .about{
+        background-image: url(../images/triangle.png);
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: 150px;
+        padding: 200px 0;
+        &-wrap{
+            width: 100%;
+            background: $color1;
+            height: 500px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            padding: 0 75px;
+            &__text{
+                width: 50%;
+                color: #fff;
+                
+            }
+            &__picture{
+                width: 50%;
+                text-align: right;
+                pointer-events: none;
+                user-select: none;
+                position: relative;
+                bottom: 30px;
+            }
+        }
+    }
+
+    // ? Advantages
+    .advantages{
+        width: 100%;
+        background-image: url(../images/light.png), url(../images/drop.png);
+        background-repeat: no-repeat;
+        background-position : 100% 50%, 0 100%;
+        padding: 100px 0;
+        &-wrap{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &__picture{
+                width: 50%;
+            }
+            &__text{
+                width: 50%;
+            }
+        }
+    }
+
+    // ? Payment
+    .payment{
+        width: 100%;
+        background-image: url(../images/star.png);
+        background-repeat: no-repeat;
+        background-size: 100px;
+        background-position: 100% 100%;
+        padding: 150px 0;
+        &-wrap{
+            width: 100%;
+            background: $color2;
+            display: flex;
+            border-radius: 20px;
+            height: 500px;
+            align-items: center;
+            justify-content: center;
+            padding: 0 75px;
+            &__text{
+                width: 50%;
+            }
+            &__picture{
+                pointer-events: none;
+                user-select: none;
+                width: 50%;
+                position: relative;
+                bottom: 30px;
+                text-align: right;
+            }
+        }
+    }
+
+    // ? Install
+    .install{
+        padding: 100px 0;
+        background-image: url(../images/triangle.png);
+        background-size: 200px;
+        background-position: 0 110%;
+        background-repeat: no-repeat;
+        &-wrap{
+            width: 100%;
+            height: 500px;
+            background: #F8F8F8;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 75px;
+            border-radius: 20px;
+            &__picture{
+                width: 50%;
+                text-align: center;
+                font-size: 0;
+                user-select: none;
+                pointer-events: none;
+                position: relative;
+                bottom: -10px;
+            }
+            &__text{
+                width: 50%;
+                &-resource{
+                    margin-top: 50px;
+                    button{
+                        background: transparent;
+                        border-radius: 10px;
+                        margin-right: 10px;
+                        border-color: $color1;
+                        a{
+                            text-decoration: none;
+                            color: $color1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            width: 100%;
+                            height: 100%;
+                            padding: 5px;
+                            text-align: left;
+                            i{
+                                font-size: 2rem;
+                                margin-right: 10px;
+                            }
+                            p{
+                                font-size: 15px;
+                                margin: 0;
+                            }
+                            h4{
+                                margin: 0;
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ! Footer
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+    &-brand{
+        p{
+            color: #909090;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+    }
+    &-menu{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li{
+           margin-bottom: 15px;
+           a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 18px;
+           }
+        }
+    }
+    &-contact{
+        &__phone{
+            display: flex;
+            align-items: center;
+            i{
+                font-size: 1.4rem;
+                margin-right: 15px;
+            }
+            a{
+                text-decoration: none;
+                font-size: 18px;
+                color: #000;
+                font-weight: bold;
+            }
+            span{
+                padding: 0;
+                font-size: 16px;
+                color: #909090;
+            }
+        }
+        &__socials{
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            a{
+                margin-right: 20px;
+                text-decoration: none;
+                color: #222;
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+// ! Responsive
+@media (max-width: 1024.5px) {
+    body{
+        background-size: 200px;
+    }
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    p{
+        font-size: 20px !important;
+    }
+    .container{
+        padding: 0 50px;
+    }
+    header{
+        .landing{
+            &-picture img{
+                width: 100%;
+
+            }
+            &-text button a{
+                width: 130px;
+                height: 50px;
+                font-size: 17px;
+            }
+        }
+    }
+    .about-wrap{
+        height: 400px !important;
+        padding: 0 30px !important;
+        &__text p{
+            font-size: 17px !important;
+        }
+        &__picture img{
+            width: 90%;
+        }
+    }
+    .advantages{
+        padding: 0 !important;
+        background-size: contain, 120px;
+        &-wrap{
+            &__text p{
+                font-size: 17px !important;
+            }
+            &__picture img{
+                width: 100%;
+            }
+        }
+    }
+    .payment-wrap{
+        padding: 0 30px !important;
+        height: 400px !important; 
+        &__text p{
+            font-size: 17px !important;
+        }
+        &__picture{
+            bottom: 15px !important;
+            img{
+                width: 65%;
+            }
+        }
+    }
+    .install-wrap{
+        overflow: hidden;
+        &__text-resource{
+            button{
+                margin-bottom: 10px;
+            }
+        }
+        &__picture{
+            bottom: -40px !important;
+            text-align: left !important;
+            img{
+                width: 90%;
+            }
+        }
+    }
+    .footer-brand p{
+        font-size: 15px !important;
+    }
+}
+@media (max-width: 768.5px){
+    header{
+        background-position: 0 100%, 95% 20%, 5% 50%, 100% 100%; 
+        background-size: 500px, 150px, 100px, 100px;
+        .nav{
+            padding: 20px 0;
+        }
+        .landing{
+            flex-direction: column;
+            padding-top: 50px;
+            &-text{
+                order: 2;
+                width: 100%;
+            }
+            &-picture{
+                width: 100%;
+                img{
+                    width: 70%;
+                };
+            }
+        }
+    }
+    main{
+        .about{
+            background-position: 0 0 ;
+            padding-bottom: 50px ;
+            &-wrap{
+                flex-direction: column;
+                height: auto !important;
+                &__text{
+                    width: 100% ;
+                    order: 2;
+                }
+                &__picture{
+                    text-align: center;
+                    height: 200px;
+                    position: static;
+                    bottom: 0 ;
+                    width: 100% ;
+                    img{
+                        position: relative;
+                        bottom: 110%;                        
+                        width: 300px;
+                    }
+                }
+            }
+        }
+        .advantages{
+            background-position: 100% 0 ;
+            &-wrap{
+                flex-direction: column;
+                &__picture{
+                    width: 100% ;
+                    text-align: center;
+                    img{
+                        width: 500px ;
+                    }
+                }
+                &__text{
+                    width: 100% ;
+                }
+            }
+        }
+        .payment{
+            background-position: 0 100%;
+            margin-top: 100px;
+            &-wrap{
+                flex-direction: column;
+                height: auto !important;
+                &__text{
+                    width: 100%;
+                    order: 2;
+                }
+                &__picture{
+                    position: relative;
+                    height: 300px;
+                    bottom: 0 !important;
+                    img{
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translate(-50%, -40%);
+                        width: 300px;
+                    }
+                }
+            }
+        }
+        .install{
+            background-image: none;
+            margin-bottom: 200px;
+            &-wrap{
+                overflow: visible;
+                position: relative;
+                height: 300px;
+                &__picture{
+                    width: 100%;
+                    bottom: 65px !important;
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width: 350px;
+                    }
+                }
+                &__text{
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    top: 100%;
+                }
+            }
+        }
+    }
+    .footer{
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 20px;
+        &>ul{
+            margin: 30px 0;
+        }
+    }
+}
+@media (max-width: 425.5px){
+    .container{
+        padding: 0 20px;
+    }
+    main{
+        .advantages{
+            &-wrap{
+                &__picture{
+                    img{
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+        .payment{
+            &-wrap{
+                height: auto !important;
+                &__picture{
+                    height: auto !important;
+                    width: 100%;
+                    top: -50% !important;
+                    bottom: 100px !important;
+                    text-align: center;
+                    img{
+                        position: static;
+                        transform: none;
+                        object-fit: contain;
+                        width: 80% !important;
+                    }
+                }
+            }
+        }
+        .install{
+            margin-bottom: 300px;
         }
     }
 }
