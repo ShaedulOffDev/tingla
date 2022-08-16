@@ -29,12 +29,12 @@ header{
         &::after{
             content: '';
             position: absolute;
-            left: 117%;
+            left: 115%;
             top: 50%;
             transform: translateY(-50%);
             background: #444;
             width: 3px;
-            height: 6px;
+            height: 5px;
             border-radius: 0 50% 50% 0;
         }
         &-level{
