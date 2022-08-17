@@ -295,11 +295,14 @@ main .videorolik-filter a {
   font-size: 5rem;
   text-decoration: none;
   color: #fff !important;
+}
+
+main .videorolik-filter a i {
   -webkit-transition: 1s ease;
   transition: 1s ease;
 }
 
-main .videorolik-filter a:hover {
+main .videorolik-filter a:hover i {
   -webkit-transform: rotateY(180deg) scale(1.2);
           transform: rotateY(180deg) scale(1.2);
 }

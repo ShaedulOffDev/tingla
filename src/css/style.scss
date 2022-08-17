@@ -208,8 +208,10 @@ main{
                 font-size: 5rem;
                 text-decoration: none;
                 color: #fff !important;
-                transition: 1s ease;
-                &:hover{
+                i{
+                    transition: 1s ease;
+                }
+                &:hover i{
                     transform: rotateY(180deg) scale(1.2);
                 }
             }
