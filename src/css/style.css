@@ -108,7 +108,6 @@ p {
 .hide {
   -webkit-animation: hide .3s ease forwards;
           animation: hide .3s ease forwards;
-  display: none;
 }
 
 @-webkit-keyframes hide {
