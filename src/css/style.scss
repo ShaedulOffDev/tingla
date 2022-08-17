@@ -39,6 +39,19 @@ p{
     background: $color1;
     color: $color2;
 }
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(176, 176, 176); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(148, 148, 148); 
+}
 // ! Loader
 .loader{
     width: 100%;
@@ -508,6 +521,9 @@ main{
     }
 }
 @media (max-width: 768.5px){
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
     header{
         background-position: 0 100%, 95% 20%, 5% 50%, 100% 100%; 
         background-size: 500px, 150px, 100px, 100px;
