@@ -793,19 +793,31 @@ main .install-wrap__text-resource button a h4 {
   }
   main .install {
     background-image: none;
-    margin-bottom: 240px;
+    padding: 50px 0;
   }
   main .install-wrap {
     overflow: visible;
-    position: relative;
-    height: 300px;
+    background: transparent;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    padding: 0;
   }
   main .install-wrap__picture {
     width: 100%;
-    bottom: 65px !important;
+    margin: 0;
+    position: static;
+    background: #F8F8F8;
+    border-radius: 20px;
+    height: 300px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -814,13 +826,33 @@ main .install-wrap__text-resource button a h4 {
     width: 350px;
   }
   main .install-wrap__text {
-    position: absolute;
     width: 100%;
-    left: 0;
-    top: 100%;
   }
   main .install-wrap__text-resource {
     margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .install-wrap__text-resource button {
+    width: auto;
+    border-radius: 5px;
+  }
+  main .install-wrap__text-resource button h4 {
+    font-size: 16px !important;
+  }
+  main .install-wrap__text-resource button i {
+    font-size: 25px !important;
+    margin: 0 !important;
+  }
+  main .install-wrap__text-resource button p {
+    font-size: 12px !important;
+  }
+  main .install-wrap__text-resource button a {
+    padding: 5px 0 !important;
   }
   .footer {
     position: relative;
@@ -904,9 +936,6 @@ main .install-wrap__text-resource button a h4 {
   main .payment-wrap__picture img {
     width: 100%;
   }
-  main .install {
-    margin-bottom: 300px;
-  }
   main .videorolik {
     border-radius: 15px;
     background: #0F0F54;
@@ -920,25 +949,14 @@ main .install-wrap__text-resource button a h4 {
   main .advantages {
     background-size: 80px;
   }
-  main .install {
-    margin-bottom: 200px;
-  }
-  main .install-wrap {
+  main .install-wrap__picture {
     height: 200px;
   }
-  main .install-wrap__picture {
-    position: relative;
-    bottom: 53px !important;
-    width: 100%;
-  }
   main .install-wrap__picture img {
-    width: 250px;
+    width: 80%;
   }
-  main .install-wrap__text-resource p {
-    font-size: 13px !important;
-  }
-  main .install-wrap__text-resource .fa-apple {
-    font-size: 3rem;
+  .footer {
+    margin: 0;
   }
   .footer-contact {
     right: 20px;
@@ -964,38 +982,6 @@ main .install-wrap__text-resource button a h4 {
   }
   main .payment-wrap__picture {
     height: 250px;
-  }
-  main .install {
-    margin-bottom: 120px;
-  }
-  main .install-wrap__text-resource {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  main .install-wrap__text-resource button {
-    margin: 0;
-    width: calc(50% - 2px);
-    border-radius: 5px;
-  }
-  main .install-wrap__text-resource button h4 {
-    font-size: 16px !important;
-  }
-  main .install-wrap__text-resource button i {
-    font-size: 25px !important;
-    margin: 0 !important;
-  }
-  main .install-wrap__text-resource button p {
-    font-size: 12px !important;
-  }
-  main .install-wrap__text-resource button a {
-    padding: 5px 0 !important;
   }
   .footer-contact {
     font-size: 20px;

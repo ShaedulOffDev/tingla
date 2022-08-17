@@ -612,28 +612,51 @@ main{
         }
         .install{
             background-image: none;
-            margin-bottom: 240px;
+            padding: 50px 0;
             &-wrap{
                 overflow: visible;
-                position: relative;
-                height: 300px;
+                background: transparent;
+                flex-direction: column;
+                height: auto;
+                padding: 0;
                 &__picture{
                     width: 100%;
-                    bottom: 65px !important;
+                    margin: 0;
+                    position: static;
+                    background: #F8F8F8;
+                    border-radius: 20px;
+                    height: 300px;
                     display: flex;
+                    align-items: flex-end;
                     justify-content: center;
                     img{
                         width: 350px;
                     }
                 }
                 &__text{
+                    width: 100%;
                     &-resource{
                         margin-top: 0;
+                        display: flex;
+                        align-items: center;
+                        button{
+                            width: auto;
+                            border-radius: 5px;
+                            h4{
+                                font-size: 16px !important;
+                            }
+                            i{
+                                font-size: 25px !important;
+                                margin: 0 !important;
+                            }
+                            p{
+                                font-size: 12px !important;
+                            }
+                            a{
+                                padding: 5px 0 !important;
+                            }   
+                        }
                     }
-                    position: absolute;
-                    width: 100%;
-                    left: 0;
-                    top: 100%;
                 }
             }
         }
@@ -716,9 +739,6 @@ main{
                 }
             }
         }
-        .install{
-            margin-bottom: 300px;
-        }
         .videorolik {
             border-radius: 15px;
             background: $color1;
@@ -732,29 +752,16 @@ main{
             background-size: 80px;
         }
         .install{
-            margin-bottom: 200px;
-            &-wrap{
-                height: 200px;            
-                &__picture{
-                    position: relative;
-                    bottom: 53px !important;
-                    width: 100%;
-                    img{
-                        width: 250px;
-                    }
-                }
-                &__text-resource{
-                    p{
-                        font-size: 13px !important;
-                    }
-                    .fa-apple{
-                        font-size: 3rem;
-                    }
+            &-wrap__picture{
+                height: 200px;
+                img{
+                    width: 80%;
                 }
             }
         }
     }
     .footer{
+        margin: 0;
         &-contact{
             right: 20px;
         }
@@ -777,33 +784,6 @@ main{
         .payment-wrap{
             &__picture{
                 height: 250px;
-            }
-        }
-        .install{
-            margin-bottom: 120px;
-            &-wrap__text-resource {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                button{
-                    margin: 0;
-                    width: calc(50% - 2px);
-                    border-radius: 5px;
-                    h4{
-                        font-size: 16px !important;
-                    }
-                    i{
-                        font-size: 25px !important;
-                        margin: 0 !important;
-                    }
-                    p{
-                        font-size: 12px !important;
-                    }
-                    a{
-                        padding: 5px 0 !important;
-                    }
-                    
-                }
             }
         }
     }
