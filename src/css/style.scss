@@ -652,7 +652,8 @@ main{
         }
     }
 }
-@media (max-width: 425.5px){
+// ! For Iphone 12 Pro Max 428x926
+@media (max-width: 428.5px){
     body{
         background-size: 100px;
     }
@@ -747,6 +748,10 @@ main{
             }
         }
     }
+}
+// ! Aslida 425x ga qilinishi kerak edi ammo iphone uchun moslashmagani uchun 428x qildim
+@media (max-width: 425.5px) {
+    // ! Empty...
 }
 @media (max-width: 320.5px){
     main{
