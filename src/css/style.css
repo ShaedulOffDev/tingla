@@ -683,6 +683,9 @@ main .install-wrap__text-resource button a h4 {
   header .nav {
     padding: 20px 0;
   }
+  header .nav-brand img {
+    width: 90px;
+  }
   header .landing {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -892,6 +895,9 @@ main .install-wrap__text-resource button a h4 {
     position: absolute;
     bottom: 30px;
     left: 50px;
+  }
+  .footer-brand img {
+    width: 90px !important;
   }
 }
 

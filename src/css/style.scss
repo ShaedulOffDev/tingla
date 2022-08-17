@@ -531,6 +531,11 @@ main{
         background-size: 500px, 150px, 100px, 100px;
         .nav{
             padding: 20px 0;
+            &-brand{
+                img{
+                    width: 90px;
+                }
+            }
         }
         .landing{
             flex-direction: column;
@@ -689,6 +694,9 @@ main{
                 position: absolute;
                 bottom: 30px;
                 left: 50px;
+            }
+            img{
+                width: 90px !important; 
             }
         }
     }
