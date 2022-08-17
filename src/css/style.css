@@ -38,6 +38,16 @@ p {
   font-size: 20px;
 }
 
+::-moz-selection {
+  background: #0F0F54;
+  color: #F9E0C7;
+}
+
+::selection {
+  background: #0F0F54;
+  color: #F9E0C7;
+}
+
 .loader {
   width: 100%;
   height: 100%;
